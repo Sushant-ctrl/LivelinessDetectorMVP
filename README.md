@@ -58,7 +58,7 @@ Each challenge has a **6-second timeout**. Failing any one challenge ends the se
 ### 1. Clone the repository
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Sushant-ctrl/LivelinessDetectorMVP
 cd LivelinessDetector
 ```
 
