@@ -31,6 +31,17 @@ Each challenge has a **6-second timeout**. Failing any one challenge ends the se
 
 ---
 
+## Demo
+
+<table>
+  <tr>
+    <td align="center"><img src="HappyFlow.gif" alt="Happy Flow"/><br/><b>Happy Flow</b></td>
+    <td align="center"><img src="devMode.gif" alt="dev Mode"/><br/><b>dev Mode</b></td>
+  </tr>
+</table>
+
+---
+
 ## Requirements
 
 - Python 3.10 or newer
