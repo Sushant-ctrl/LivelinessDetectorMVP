@@ -19,6 +19,8 @@ env/
 # MediaPipe model files (auto-downloaded on first run)
 *.task
 
+# Do NOT ignore project images (e.g. flow_diagram.png)
+
 # IDE
 .idea/
 .vscode/

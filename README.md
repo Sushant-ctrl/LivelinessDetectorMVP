@@ -6,21 +6,7 @@ A real-time webcam liveness detection system that verifies a face belongs to a l
 
 The verification pipeline runs in two sequential stages:
 
-```
-┌──────────────┐     ┌───────────────────────────────────────────────┐     ┌─────────┐
-│  No Face     │────▶│  Stage 1 — Passive (20 frames)                │────▶│         │
-│  Detected    │     │  Laplacian texture score on face ROI           │     │  Stage 2│
-│              │     │  Low score → "low texture" spoof warning       │     │ Active  │
-└──────────────┘     └───────────────────────────────────────────────┘     │Challenge│
-                                                                            │  Loop   │
-                                                                            └────┬────┘
-                                                                                 │
-                                              ┌──────────────────────────────────┤
-                                              ▼                                  ▼
-                                        VERIFICATION                      VERIFICATION
-                                           PASSED                            FAILED
-                                         (all done)                      (timeout expired)
-```
+![Flow Diagram](flow_diagram.png)
 
 ### Stage 1 — Passive Texture Check
 Over 20 consecutive frames, the Laplacian variance of the face region is measured. A real face has high-frequency texture (pores, wrinkles, hair). A flat photo or screen has noticeably lower variance. A warning is shown if the texture is suspiciously low, but it does not block the challenge.
